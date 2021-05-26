@@ -52,6 +52,17 @@ struct proc {
   #ifdef CS333_P1
     uint start_ticks;
   #endif
+  #ifdef CS333_P2
+    uint uid;                    // Process User ID
+    uint gid;                    // Process Group ID
+    uint cpu_ticks_total;        // Total elapsed ticks in CPU
+    uint cpu_ticks_in;           // Ticks when scheduled 
+  #endif
+  // uint getuid(void) // UID of the current process
+  // uint getgid(void) // GID of the current process
+  // uint getppid(void) // process ID of the parent process
+  // int setuid(uint) // set UID
+  // int setgid(uint) // set GID
 };
 
 // Process memory is laid out contiguously, low addresses first:
